@@ -1,0 +1,117 @@
+@layer components {
+    .trans,
+    .t-trans,
+    .trans-all {
+        @apply duration-300 ease-in-out;
+    }
+
+    .fl-2 {
+        @apply fl gap-base;
+    }
+    .fl-5 {
+        @apply fl gap-large;
+    }
+    .abs-center {
+        @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2;
+    }
+    .main-border-b,
+    .main-border-t,
+    .main-border-l,
+    .main-border-r,
+    hr {
+        @apply main-border;
+    }
+
+    .main-border {
+        @apply border;
+    }
+    .main-border-b {
+        @apply border-b;
+    }
+    .main-border-t {
+        @apply border-t;
+    }
+    .main-border-l {
+        @apply border-l;
+    }
+    .main-border-r {
+        @apply border-r;
+    }
+
+    .padding-section {
+        @apply py-40 md:py-32 sm:py-24;
+    }
+
+    .btn {
+        @apply rounded-full flex-center gap-base font-semibold trans-all duration-300 px-4 py-2.5;
+    }
+
+    .btn:focus-visible,
+    a:focus-visible,
+    button:focus-visible {
+        @apply outline-2 outline-offset-2 outline-primary;
+    }
+
+    /* Sizes */
+    .btn-small {
+        @apply text-sm px-3 py-1.5;
+    }
+
+    .btn-large {
+        @apply text-lg px-5 py-3;
+    }
+    .btn-xlarge {
+        @apply text-xl px-6 py-3;
+    }
+
+    /* Colors */
+    .btn-primary {
+        @apply bg-primary hover:bg-primary-600 text-light main-border hover:text-primary-100;
+    }
+
+    .btn-outline {
+        @apply bg-transparent  border border-primary-600 hover:border-primary-400 text-primary-600 hover:bg-primary-600 hover:text-primary-100;
+    }
+
+   
+
+    .btn-white {
+        @apply bg-light text-primary-600 hover:bg-primary-200;
+    }
+    .btn-outline-white {
+        @apply bg-transparent hover:bg-light text-light hover:text-primary border-2 border-light hover:border-light transition-all;
+    }
+
+    .full-section {
+        @apply min-h-dvh w-full relative flex-center py-4 fl;
+    }
+    .full-section > :where(.background-content) {
+        @apply absolute w-full h-full object-cover -z-1;
+    }
+
+    .text-colorize {
+        @apply text-primary-background px-2 py-1 w-fit;
+    }
+    .text-colorize.primary {
+        @apply bg-light text-primary!;
+    }
+  
+
+    .text-colorize.brand {
+        @apply bg-primary text-light;
+    }
+
+    .section-title {
+        @apply text-primary font-bold text-xl relative ps-4;
+        &::before {
+            @apply content-[''] absolute start-0 top-1/2 -translate-y-1/2  w-2 h-full;
+        }
+    }
+    .section-title.primary {
+        @apply before:bg-primary;
+    }
+  
+    .section-title.brand {
+        @apply before:bg-primary;
+    }
+}

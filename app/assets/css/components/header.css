@@ -1,0 +1,59 @@
+/* Mobile-first: base = mobile, md: = 768px+ */
+
+.app-header {
+    @apply fixed  w-full z-800 md:bg-light trans-all duration-700 top-4 md:top-0 bg-transparent;
+}
+
+/* .app-header.active .header-container {
+  @apply rounded-lg!;
+} */
+
+.app-header .header-container {
+    @apply md:w-full py-1.5 md:ps-6 pe-2.5 flex-between gap-large container mx-auto rounded-full md:rounded-none bg-light md:bg-transparent ps-2.5;
+}
+
+.app-header .header-container .navbar {
+    @apply hidden mx-auto gap-large text-black md:flex items-center justify-center;
+}
+.app-header .header-container .navbar .navbar-items {
+    @apply hidden gap-base md:flex items-center text-lg;
+}
+/* .navbar-item-wrapper {
+    @apply relative;
+} */
+.navbar-item {
+    @apply text-gray-800 trans hover:bg-gray-800 hover:text-white relative px-4 py-2.5 rounded-lg;
+}
+.navbar-item--open {
+    @apply bg-primary/20 text-primary;
+}
+.navbar-item.router-link-active.router-link-exact-active {
+    @apply bg-gray-800 text-white;
+}
+.navbar-item.mobile {
+    @apply text-4xl text-primary-600 after:bg-zinc-700;
+}
+
+.app-header .navbar-item.active {
+    @apply after:scale-x-100 after:opacity-100 text-white;
+}
+.app-header .navbar-item.mobile.active {
+    @apply text-black;
+}
+/* animate */
+
+.slide-down-header-enter-from,
+.slide-down-header-leave-to {
+    max-height: 0;
+}
+
+.slide-down-header-enter-to,
+.slide-down-header-leave-from {
+    max-height: 300px;
+}
+
+.slide-down-header-leave-active,
+.slide-down-header-enter-active {
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}

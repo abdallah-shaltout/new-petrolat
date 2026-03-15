@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -r \"navbar\\\\|Navbar\" /c/Users/abdal/OneDrive/Documents/petroal-master/app/layouts --include=*.vue)",
+      "Bash(find /c/Users/abdal/OneDrive/Documents/petroal-master/app -name \"*.vue\" -exec grep -l \"navbar\\\\|Navbar\" {})"
+    ]
+  }
+}

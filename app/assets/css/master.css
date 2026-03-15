@@ -1,0 +1,14 @@
+@import "primeicons/primeicons.css";
+@import "tailwindcss";
+@import "vue3-carousel/carousel.css";
+@import "@splidejs/vue-splide/css";
+
+@import "flag-icons/css/flag-icons.min.css";
+@import "./theme.css";
+@import "./utils.css";
+@import "./base.css";
+@import "./components.css";
+@import "./custom.css";
+@import "./animate/animate.css";
+@import "./components/index.css";
+@import "../fonts/stylesheet.css";

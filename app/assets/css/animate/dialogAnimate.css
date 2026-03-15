@@ -1,0 +1,146 @@
+.dialog-animate-top-enter-active,
+.dialog-animate-top-leave-active,
+.dialog-animate-bottom-enter-active,
+.dialog-animate-bottom-leave-active,
+.dialog-animate-left-enter-active,
+.dialog-animate-left-leave-active,
+.dialog-animate-right-enter-active,
+.dialog-animate-right-leave-active,
+.dialog-animate-center-enter-active,
+.dialog-animate-center-leave-active {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.dialog-animate-top-leave-active,
+.dialog-animate-bottom-leave-active,
+.dialog-animate-left-leave-active,
+.dialog-animate-right-leave-active,
+.dialog-animate-center-leave-active {
+  transition-delay: 300ms;
+}
+
+.dialog-animate-top-enter-from,
+.dialog-animate-top-leave-to,
+.dialog-animate-bottom-enter-from,
+.dialog-animate-bottom-leave-to,
+.dialog-animate-left-enter-from,
+.dialog-animate-left-leave-to,
+.dialog-animate-right-enter-from,
+.dialog-animate-right-leave-to,
+.dialog-animate-center-enter-from,
+.dialog-animate-center-leave-to {
+  opacity: 0;
+}
+
+:where(
+    .dialog-animate-top-enter-active,
+    .dialog-animate-bottom-enter-active,
+    .dialog-animate-left-enter-active,
+    .dialog-animate-right-enter-active,
+    .dialog-animate-center-enter-active
+  )
+  .dialog-content,
+:where(
+    .dialog-animate-top-leave-active,
+    .dialog-animate-bottom-leave-active,
+    .dialog-animate-left-leave-active,
+    .dialog-animate-right-leave-active,
+    .dialog-animate-center-leave-active
+  )
+  .dialog-content {
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  transform-origin: center;
+}
+
+:where(.dialog-animate-top-enter-active) .dialog-content,
+:where(.dialog-animate-top-leave-active) .dialog-content {
+  animation-name: dialog-animate-top;
+}
+
+:where(.dialog-animate-bottom-enter-active) .dialog-content,
+:where(.dialog-animate-bottom-leave-active) .dialog-content {
+  animation-name: dialog-animate-bottom;
+}
+
+:where(.dialog-animate-left-enter-active) .dialog-content,
+:where(.dialog-animate-left-leave-active) .dialog-content {
+  animation-name: dialog-animate-left;
+}
+
+:where(.dialog-animate-right-enter-active) .dialog-content,
+:where(.dialog-animate-right-leave-active) .dialog-content {
+  animation-name: dialog-animate-right;
+}
+
+:where(.dialog-animate-center-enter-active) .dialog-content,
+:where(.dialog-animate-center-leave-active) .dialog-content {
+  animation-name: dialog-animate-center;
+}
+
+:where(
+    .dialog-animate-top-leave-active,
+    .dialog-animate-bottom-leave-active,
+    .dialog-animate-left-leave-active,
+    .dialog-animate-right-leave-active,
+    .dialog-animate-center-leave-active
+  )
+  .dialog-content {
+  animation-direction: reverse;
+}
+
+@keyframes dialog-animate-top {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes dialog-animate-bottom {
+  0% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes dialog-animate-left {
+  0% {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes dialog-animate-right {
+  0% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes dialog-animate-center {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

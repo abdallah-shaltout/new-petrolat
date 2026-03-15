@@ -1,0 +1,106 @@
+@theme {
+    /* primary colors */
+    --color-primary-50: hsl(45, 40%, 98.04%);
+    --color-primary-100: hsl(45, 40%, 98.04%);
+    --color-primary-200: hsl(51.43, 53.85%, 97.45%);
+    --color-primary-300: hsl(51.08, 100%, 85.49%);
+    --color-primary-400: hsl(51.14, 98.68%, 70.39%);
+    --color-primary-500: hsl(50.93, 99.12%, 55.49%);
+    --color-primary-600: hsl(51.13, 99.14%, 45.49%);
+    --color-primary-700: hsl(50.77, 98.98%, 38.63%);
+    --color-primary-800: hsl(51, 84.34%, 32.55%);
+    --color-primary-900: hsl(51.22, 84.83%, 28.43%);
+    --color-primary-950: hsl(51.14, 84.62%, 20.39%);
+    --color-primary: hsl(50.93, 99.12%, 55.49%);
+    /* primary end */
+
+    /* Background - Light Mode */
+    --color-primary-background: hsl(0, 0%, 100%);
+    --color-secondary-background: hsl(0, 0%, 98%);
+
+    /* Text - Light Mode */
+    --color-light: hsl(0, 0%, 100%);
+    --color-dark: hsl(0, 0%, 10%);
+
+    /* Custom Width */
+    --width-100: 100px;
+    --width-150: 150px;
+    --width-200: 200px;
+    --width-250: 250px;
+    --width-300: 300px;
+    --width-350: 350px;
+    --width-400: 400px;
+    --width-450: 450px;
+    --width-500: 500px;
+    --width-550: 550px;
+    --width-600: 600px;
+    --width-650: 650px;
+    --width-700: 700px;
+    --width-750: 750px;
+    --width-800: 800px;
+    --width-850: 850px;
+    --width-900: 900px;
+    --width-950: 950px;
+    --width-1000: 1000px;
+    --width-nine: 90%;
+
+    /* custom max width */
+
+    --max-width-nine: 90%;
+    /* Custom Height */
+    --height-100: 100px;
+    --height-150: 150px;
+    --height-200: 200px;
+    --height-250: 250px;
+    --height-300: 300px;
+    --height-350: 350px;
+    --height-400: 400px;
+    --height-450: 450px;
+    --height-500: 500px;
+    --height-550: 550px;
+    --height-600: 600px;
+    --height-650: 650px;
+    --height-700: 700px;
+    --height-750: 750px;
+    --height-800: 800px;
+    --height-850: 850px;
+    --height-900: 900px;
+    --height-950: 950px;
+    --height-1000: 1000px;
+    --height-nine: 90%;
+
+    /* custom min height */
+    --min-height-hdvh: 50dvh;
+
+    /* Custom Z-index */
+    --z-1: 1;
+    --z-2: 2;
+    --z-3: 3;
+    --z-4: 4;
+    --z-5: 5;
+    --z-6: 6;
+    --z-7: 7;
+    --z-8: 8;
+    --z-9: 9;
+    --z-100: 100;
+    --z-200: 200;
+    --z-300: 300;
+    --z-400: 400;
+    --z-500: 500;
+    --z-600: 600;
+    --z-700: 700;
+    --z-800: 800;
+    --z-900: 900;
+    --z-1000: 1000;
+
+    /* Gap */
+    --gap-xs: 4px;
+    --gap-sm: 8px;
+    --gap-base: 10px;
+    --gap-large: 20px;
+
+    /* fonts */
+    --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+    --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+@custom-variant dark (&:where(.dark, .dark *));

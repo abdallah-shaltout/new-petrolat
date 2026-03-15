@@ -1,0 +1,23 @@
+.image-wrap {
+  position: relative;
+  width: 100%;
+  clip-path: polygon(0px 100%, 100% 100%, 100% 100%, 0px 100%);
+  visibility: hidden;
+  transition: 0.5s ease-out 0.2s;
+  overflow: hidden;
+}
+.image-wrap img {
+  transform: scale(1.3);
+  transition: 2s ease-out;
+}
+.animating.image-wrap {
+  clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0px 100%);
+  visibility: visible;
+  transform: skewY(0deg);
+}
+
+.animating.image-wrap img,
+.animating.image-wrap video {
+  transform: scale(1);
+  transition: 4s ease-out;
+}

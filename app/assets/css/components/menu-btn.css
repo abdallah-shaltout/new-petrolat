@@ -1,0 +1,59 @@
+.app-menu-btn {
+    @apply cursor-pointer;
+}
+.app-menu-btn svg {
+    @apply absolute w-full h-full transition-all duration-300 ease-in-out stroke-primary-900;
+    fill: none;
+    /* stroke: theme("colors.secondary"); */
+    stroke-width: 5;
+    stroke-linecap: round;
+    transition: all 0.3s ease-in-out;
+}
+
+.app-menu-btn svg.x {
+    @apply w-full h-full;
+    opacity: 0;
+    transform: scale(0);
+}
+
+.app-menu-btn.active svg.burger {
+    opacity: 0;
+    transform: scale(0.5);
+    @apply w-full h-full;
+}
+
+.app-menu-btn.active svg.x {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.app-menu-btn .line {
+    transition: all 0.3s ease-in-out;
+}
+
+.app-menu-btn .line1 {
+    stroke-dasharray: 40 139;
+    stroke-dashoffset: 0;
+}
+
+.app-menu-btn .line2 {
+    stroke-dasharray: 40 180;
+    stroke-dashoffset: 0;
+}
+
+.app-menu-btn .line3 {
+    stroke-dasharray: 40 139;
+    stroke-dashoffset: 0;
+}
+
+.app-menu-btn.active .line1 {
+    stroke-dashoffset: -98;
+}
+
+.app-menu-btn.active .line2 {
+    stroke-dashoffset: -180;
+}
+
+.app-menu-btn.active .line3 {
+    stroke-dashoffset: -98;
+}

@@ -1,0 +1,188 @@
+.slide-down-enter-from,
+.slide-down-leave-to {
+    max-height: 0;
+}
+
+.slide-down-enter-to,
+.slide-down-leave-from {
+    max-height: 1000px;
+}
+
+.slide-down-leave-active {
+    overflow: hidden;
+    transition: max-height 0.45s cubic-bezier(0, 1, 0, 1);
+}
+
+.slide-down-enter-active {
+    overflow: hidden;
+    transition: max-height 1s ease-in-out;
+}
+
+/* Fade */
+
+.layout-animation-enter-active,
+.layout-animation-leave-active {
+    transition:
+        opacity 0.3s ease,
+        filter 0.3s ease,
+        transform 0.3s ease;
+}
+
+.layout-animation-enter-from,
+.layout-animation-leave-to {
+    opacity: 0;
+    filter: blur(2px);
+    transform: scale(0.9);
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+
+/* fade move */
+.fade-move-enter-active,
+.fade-move-leave-active {
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+.fade-move-enter-from,
+.fade-move-leave-to {
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+.fade-blur-enter-active,
+.fade-blur-leave-active {
+    transition: all 0.5s ease;
+}
+
+.fade-blur-enter-from,
+.fade-blur-leave-to {
+    opacity: 0;
+    filter: blur(30px);
+}
+
+.fade-list-move,
+.fade-list-enter-active,
+.fade-list-leave-active {
+    transition: opacity 0.5s ease;
+}
+
+/* 2. declare enter from and leave to state */
+.fade-list-enter-from,
+.fade-list-leave-to {
+    opacity: 0;
+}
+
+/* 3. ensure leaving items are taken out of layout flow so that moving
+      animations can be calculated correctly. */
+.fade-list-leave-active {
+    position: absolute;
+}
+
+/* zoom aniamtion */
+.zoom-enter-active,
+.zoom-leave-active {
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+.zoom-enter-from,
+.zoom-leave-to {
+    opacity: 0;
+    transform: scale(0.3);
+}
+
+/* shrink animate one */
+
+.shrink-move {
+    transition: all 0.4s;
+}
+
+.shrink-leave-active {
+    opacity: 0;
+    position: absolute;
+    transition: transform 0.3s;
+}
+
+.shrink-enter-active {
+    transition:
+        opacity 0.4s ease-out 0.2s,
+        transform 0.4s ease-out;
+    will-change: opacity, transform;
+}
+
+.shrink-enter,
+.shrink-enter-from,
+.shrink-leave-to {
+    opacity: 0;
+    transform: scale(0.75) translateY(25%);
+}
+
+/* fade in with blur */
+@keyframes fadeInBlur {
+    0% {
+        opacity: 0;
+        filter: blur(20px);
+    }
+    50% {
+        filter: blur(10px);
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+.fade-in-blur {
+    animation: fadeInBlur 1.2s ease-out forwards;
+}
+
+.fade-in-blur-delay {
+    animation: fadeInBlur 1.2s ease-out 0.3s forwards;
+    opacity: 0;
+}
+
+/* infinite animation slow  */
+@keyframes floatUpDown {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+.float-slow {
+    animation: floatUpDown 4s ease-in-out infinite;
+}

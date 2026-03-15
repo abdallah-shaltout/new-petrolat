@@ -1,0 +1,13 @@
+{
+    // https://nuxt.com/docs/guide/concepts/typescript
+    "extends": "./.nuxt/tsconfig.json",
+    "compilerOptions": {
+        // "skipLibCheck": true,
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "module": "esnext",
+        "moduleResolution": "bundler"
+    },
+    "exclude": ["node_modules"]
+}

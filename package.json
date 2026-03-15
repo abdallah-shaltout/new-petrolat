@@ -1,0 +1,47 @@
+{
+    "name": "ciadel-clinics",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "nuxt build",
+        "dev": "nuxt dev",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "clean": "npx nuxt cleanup",
+        "postinstall": "nuxt prepare",
+        "format": "prettier --write ."
+    },
+    "dependencies": {
+        "@formkit/auto-animate": "^0.9.0",
+        "@nuxt/eslint": "1.5.2",
+        "@nuxt/image": "2.0.0",
+        "@nuxtjs/i18n": "^10.2.1",
+        "@nuxtjs/sitemap": "^7.6.0",
+        "@splidejs/vue-splide": "^0.6.12",
+        "@tailwindcss/vite": "^4.1.11",
+        "@vueuse/core": "^14.0.0",
+        "@vueuse/motion": "^3.0.3",
+        "@vueuse/nuxt": "^14.0.0",
+        "@vueuse/router": "^14.0.0",
+        "eslint": "^9.0.0",
+        "flag-icons": "^7.5.0",
+        "gsap": "^3.13.0",
+        "lenis": "^1.3.4",
+        "nuxt": "^4.2.0",
+        "nuxt-gtag": "4.1.0",
+        "nuxt-ripple": "^0.0.8",
+        "primeicons": "^7.0.0",
+        "tailwindcss": "^4.1.11",
+        "vue-router": "^4.5.1",
+        "vue3-carousel": "^0.17.0"
+    },
+    "devDependencies": {
+        "@types/node": "^24.10.1",
+        "prettier": "^3.6.2",
+        "typescript": "^5.8.3"
+    },
+    "engines": {
+        "node": ">=22"
+    },
+    "packageManager": "bun@1.2.22"
+}

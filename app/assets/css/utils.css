@@ -1,0 +1,83 @@
+@utility container {
+    margin-inline: auto;
+    width: 90%;
+    max-width: 1600px;
+    /* overflow-x: hidden; */
+
+    @variant md {
+        max-width: 95%;
+    }
+}
+
+@utility container-fluid {
+    width: 90%;
+    margin-inline: auto;
+    @variant md {
+        max-width: 100%;
+    }
+}
+
+@utility dir-ltr {
+    direction: ltr;
+}
+
+@utility dir-rtl {
+    direction: rtl;
+}
+
+@utility custom-scroll {
+    &::-webkit-scrollbar-track {
+        @apply bg-zinc-800 rounded-md;
+    }
+    &::-webkit-scrollbar {
+        @apply bg-primary! w-[3px] sm:w-[2px] h-1;
+    }
+    &::-webkit-scrollbar-thumb {
+        @apply rounded-lg bg-primary hover:bg-primary-600;
+    }
+}
+
+@utility hide-scroll {
+    &::-webkit-scrollbar {
+        @apply w-0;
+    }
+}
+@utility fc {
+    @apply flex items-center;
+}
+
+@utility flex-center {
+    @apply flex justify-center items-center;
+}
+
+@utility flex-between {
+    @apply flex justify-between items-center;
+}
+
+@utility flex-end {
+    @apply flex justify-end;
+}
+
+@utility fs {
+    @apply flex items-start;
+}
+
+@utility fl {
+    @apply flex flex-col;
+}
+
+@utility trans {
+    @apply transition-colors;
+}
+
+@utility t-trans {
+    @apply transition-transform;
+}
+
+@utility trans-all {
+    @apply transition-all;
+}
+
+@utility main-border {
+    @apply border-gray-300/30;
+}
